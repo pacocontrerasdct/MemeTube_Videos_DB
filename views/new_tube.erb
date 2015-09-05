@@ -1,1 +1,20 @@
-<p>Hello this <%= @title_of_page %></p>
+<p>Insert your <%= @title_of_page %> TUBE</p>
+<form action="/new_tube" method="get" name="new_tube_video">
+  <label for="new_title">[T]ITLE</label>
+  <br>
+  <input type="text" id="new_title" name="new_title" size="100px" placeholder="What's the title of the video?" autofocus>
+  <br>
+  <label for="new_description">DESCR[I]PT[I]ON</label>
+  <br>
+  <input type="text" id="new_description" name="new_description" size="100px" placeholder="Would you like to put a description or a comment">
+  <br>
+  <label for="new_genre">GENR[e]</label>
+  <br>
+  <input type="text" name="new_genre" id="new_genre" size="50px" placeholder="Which genre this video belongs to?">
+  <br>
+  <label for="new_url">youtube/[URL]</label>
+  <br>
+  <input type="text" name="new_url" id="new_url" size="50px" placeholder="Write the end of the url from youtube: .../V2fpgpanZAw">
+  <br>
+  <button alt="Memerize it!">[+]T</button>
+</form>
