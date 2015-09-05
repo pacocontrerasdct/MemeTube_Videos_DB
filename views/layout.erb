@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MEMETUBE - Links 2 tubes</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div id="id_logo">LOGO HERE</div>
+      <div id="id_headline">HEADLINE - TITLE HERE</div>
+      <nav id="id_nav_top">MAIN MENU HERE
+        <ul>
+          <li><a href="/home" alt="Back home">HOME</a></li>
+          <li><a href="/new_tube" alt="Add a tube">[+]TUBE</a></li>
+          <li><a href="/find_tube" alt="Find a tube">T[U]BE</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <nav id="id_nav_footer">
+        <ul>
+          <li><a href="/home" alt="Back home">HOME</a></li>
+          <li><a href="/new_tube" alt="Add a tube">+TUBE</a></li>
+          <li><a href="/find_tube" alt="Find a tube">T[U]BE</a></li>
+        </ul>
+      </nav>
+      <div id="id_copyrights">LINE OF RIGHTS AND LINK TO DEV SITE</div>
+    </footer>
+  </div>
+</body>
+</html>

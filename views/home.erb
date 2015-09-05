@@ -1,0 +1,28 @@
+<ul>
+  <% if @list %>
+  <% @list.each do |video| %>
+  <li>
+  <div id="v_container">
+    
+    <div id="v_container_left">
+      <iframe id="player" type="text/html" width="480" height="320" src="https://youtube.com/embed/<%= video['url']%>" frameborder="0">
+      </iframe>
+    </div>
+
+    <div id="v_container_right">
+      <span>[T]itle:</span>
+      <span><%= video['title']%></span>
+      <span>[D]escription:</span>
+      <span><%= video['description']%></span>
+      <span>[G]enre:</span>
+      <span><%= video['genre']%></span>
+      <p>
+        <a href="/update_do?id=<%= video['id']%>">[Update]</a>
+        <a href="/delete_do?id=<%= video['id']%>">[Delete]</a>
+      </p>
+    </div>
+  </div>
+  </li>
+  <% end %>
+</ul>
+<% end %>

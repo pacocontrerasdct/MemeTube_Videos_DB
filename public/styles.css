@@ -1,0 +1,68 @@
+body {
+  background-color: pink;
+  margin: 0;
+  font-size: 62.5%;
+}
+#container {
+  margin: 0 auto;
+  width: 90%;
+}
+header {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: yellow;
+  font-size: 2em;
+}
+nav {
+  background-color: white;
+  padding: 10px;
+}
+li {
+  display: inline-block;
+  margin: 5px 20px 0
+}
+main {
+  font-size: 1.6em;
+  font-family: arial, courier;
+}
+footer {
+  background-color: black;
+  color: white;
+  font-size: 1.4em;
+  text-align: right;
+}
+#id_logo {
+  font-size: 2em;
+}
+#v_container {
+  width: 80%;
+  height: auto;
+  background-color: black;
+  padding: 20px;
+  display: inline-block;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+#v_container_right {
+  display: inline-block;
+  float: left;
+  font-size: 1.2em;
+  color: white;
+  width: 35%;
+  padding: 0 0 0 20px;
+  letter-spacing: 0.1em;
+}
+#v_container_left {
+  display: inline-block;
+  float: left;
+}
+#v_container_right a {
+  font-size: 1em;
+  color: red;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+#v_container_right a:hover {
+  color: orange;
+}
