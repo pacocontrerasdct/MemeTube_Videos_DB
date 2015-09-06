@@ -12,18 +12,21 @@ header {
   padding: 10px;
   background-color: yellow;
   font-size: 2em;
+  height: 150px;
 }
-nav {
+nav, #id_nav_top ul {
   background-color: white;
-  padding: 10px;
+  padding: 0;
+  margin: 0;
 }
 li {
   display: inline-block;
-  margin: 5px 20px 0
+  margin: 20px 20px 0 0;
 }
 main {
   font-size: 1.6em;
   font-family: arial, courier;
+  margin: 10px auto;
 }
 footer {
   background-color: black;
@@ -65,4 +68,20 @@ footer {
 }
 #v_container_right a:hover {
   color: orange;
+}
+#id_nav_top {
+  display: inline-block;
+  float: left;
+}
+#id_nav_search {
+  display: inline-block;
+  float : right;
+  margin: 10px 10px 0 0;
+}
+input { 
+  font-size: 0.8em;
+  background-color: grey;
+}
+button {
+  font-size: 0.8em;
 }

@@ -1,19 +1,9 @@
-<p>Find a TUBE</p>
-<form action="/find_tube" method="get" name="new_tube_video">
-  <label for="new_title">Submit a [T]ITLE</label>
-  <br>
-  <input type="text" id="new_title" name="new_title" size="100px" placeholder="Title of the video? Any single word? A part of it?" autofocus>
-  <br>
-  <label for="new_genre">Look for a specific GENR[e]</label>
-  <br>
-  <input type="text" name="new_genre" id="new_genre" size="50px" placeholder="What is the genre of the video?">
-  <br>
-  <button alt="Find it!">[FI(N)D]</button>
-</form>
-<% if @find_video == false %>
-<h2><%= @find_no_video %></h2>
-<% end %>
 <ul>
+
+
+<h2><%= @find_no_video %></h2>
+
+
   <% if @find_video %>
   <% @find_video.each do |video| %>
   <li>

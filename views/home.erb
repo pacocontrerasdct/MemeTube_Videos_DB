@@ -11,11 +11,11 @@
 
     <div id="v_container_right">
       <span>[T]itle:</span>
-      <span><%= video['title']%></span>
+      <span><%= video['title'].capitalize %></span>
       <span>[D]escription:</span>
-      <span><%= video['description']%></span>
+      <span><%= video['description'].capitalize %></span>
       <span>[G]enre:</span>
-      <span><%= video['genre']%></span>
+      <span><%= video['genre'].capitalize %></span>
       <p>
         <a href="/update_tube?id=<%= video['id']%>">[Update]</a>
         <a href="/delete_tube?id=<%= video['id']%>">[Delete]</a>
