@@ -78,16 +78,27 @@ get '/find_tube' do
   
   if params[:find_me].to_s != ""
     @find_me = params[:find_me].downcase
-    puts "find me this:", find_me
-
-    title = params[:new_title]
-    genre = params[:new_genre]
+    puts "find me this:", @find_me
     
-    finding_fields = [title, genre, description]   
+    finding_fields = ['title', 'genre', 'description']   
     
     finding_fields.each { |find_in| 
-      sql = "select * from videos where '%#{find_in}%' LIKE '%#{@find_me}%' "
+      
+      puts "find_me:", @find_me
+
+      puts "find_in:", find_in
+
+
+      sql = "select * from videos where #{find_in} LIKE '%#{@find_me}%' "
       @find_video = @db.exec(sql)
+      puts "sql:", sql
+      if @find_video.first
+        found = @find_video.first
+        puts "found:", found
+        erb :find_tube
+      else
+        puts "not found"
+      end
     }
 
   end 
