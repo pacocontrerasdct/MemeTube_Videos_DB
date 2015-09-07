@@ -1,7 +1,9 @@
 body {
-  background-color: pink;
+  background-color: black;
   margin: 0;
   font-size: 62.5%;
+  font-family: 'Inconsolata' ;
+  color: white;
 }
 #container {
   margin: 0 auto;
@@ -11,60 +13,99 @@ header {
   margin: 10px 0;
   padding: 10px;
   background-color: yellow;
-  font-size: 2em;
-  height: 150px;
+  display: inline-block;
+  width: 100%;
+  color: black;
 }
-nav, #id_nav_top ul {
-  background-color: white;
+h1 {
+  font-size: 5em;
+  font-weight: bold;
+  margin: 0;
+}
+h2 {
+  font-size: 3em;
+  margin: 0;
+}
+.notice {
+  font-size: 1.8em;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+  padding-left: 10px;
+  line-height: normal;
+  margin: 0 0 5px 0;
+}
+.yellow {
+  color: yellow;
+}
+nav{
+  display: inline-block;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin-left: -30px;
+}
+label {
+  font-size: 1.3em;
+  color: yellow;
+}
+#id_nav_top li {
+  display: inline-block;
   padding: 0;
   margin: 0;
 }
-li {
-  display: inline-block;
-  margin: 20px 20px 0 0;
+#id_nav_top li a {
+  padding-right: 20px;
+    font-size: 2.6em;
 }
+
 main {
   font-size: 1.6em;
   font-family: arial, courier;
   margin: 10px auto;
+  width: 100%;
 }
 footer {
-  background-color: black;
+  background-color: indigo;
+  width: 100%;
   color: white;
   font-size: 1.4em;
   text-align: right;
+  margin-bottom: 10px;
 }
 #id_logo {
   font-size: 2em;
 }
+
 #v_container {
-  width: 80%;
   height: auto;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
   background-color: black;
-  padding: 20px;
-  display: inline-block;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
+  display: block;
+  border: 1px solid yellow;
 }
 #v_container_right {
   display: inline-block;
-  float: left;
   font-size: 1.2em;
   color: white;
-  width: 35%;
-  padding: 0 0 0 20px;
   letter-spacing: 0.1em;
+  vertical-align: top;
+  padding:  20px;
 }
 #v_container_left {
   display: inline-block;
-  float: left;
 }
 #v_container_right a {
   font-size: 1em;
   color: red;
   letter-spacing: 0.1em;
-  text-decoration: none;
 }
 #v_container_right a:hover {
   color: orange;
@@ -79,9 +120,54 @@ footer {
   margin: 10px 10px 0 0;
 }
 input { 
-  font-size: 0.8em;
-  background-color: grey;
+  font-size: 2em;
+  background-color: black;
+  color: white;
+}
+main form input { 
+  font-size: 1.2em;
+  background-color: black;
+  color: white;
+  margin-bottom: 15px;
 }
 button {
-  font-size: 0.8em;
+  font-size: 2em;
+  letter-spacing: 0.1;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+button:hover {
+  border: 1px solid black;
+}
+.form_button {
+  color: yellow;
+  border: 2px solid yellow;
+  text-align: center;
+  vertical-align: center;
+  margin-left: 600px;
+  letter-spacing: .2em;
+  font-size: 1.4em;
+}
+.form_button:hover {
+  color: yellow;
+  border: 2px solid red;
+}
+#id_nav_footer li{
+  display: inline-block;
+  border: 1px dotted white;
+  text-align: center;
+  vertical-align: center;
+  margin-right: 20px;
+}
+#id_nav_footer a {
+  font-size: 1.4em;
+  color: white;
+  text-decoration: none;
+
+  padding: 5px 10px;
+}
+#id_copyrights {
+  text-align: center;
+  vertical-align: center;
+  margin-right: 20px;
 }

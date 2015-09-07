@@ -77,87 +77,34 @@ end
 get '/find_tube' do
   # to the next array i'll pass id from videos that match word
   @found_videos = []
-
-  @found_videos << 1
-
+  @count = 0
   if params[:find_me].to_s != ""
     @find_me = params[:find_me].downcase
     #puts "find me this:", @find_me 
-    finding_fields = ['title', 'genre', 'description']   
-    
-    @found_videos << 2
+    finding_fields = ['title', 'genre', 'description']
 
     finding_fields.each { |find_in| 
       #puts "find_me:", @find_me
       #puts "find_in:", find_in
-      
-
-      # Getting all matching rows
       sql = "select count(id) from videos where #{find_in} LIKE '%#{@find_me}%' "
       count = @db.exec(sql)
-      num_match_results = count.first['count'].to_i
-      
-      # Next select every single row and push it towards @found_videos array
-      
-        
-        # Next select a single result
-        sql = "select * from videos where #{find_in} LIKE '%#{@find_me}%' "
-        result = @db.exec(sql)
-        puts result.to_a
-        puts "sql inside upto:", sql
-      
-      
-
-      
-      
-      
-
-
-
-
-
-      #if @find_video.first
-      #  found = @find_video.first
-      #  puts "found:", found['id']
-      #  puts "found:", found
-      #  @found_videos << found['id']
-      #  erb :find_tube
-      #end
+      # Next select a single result
+      sql = "select * from videos where #{find_in} LIKE '%#{@find_me}%' "
+      result = @db.exec(sql)
+      @found_videos << result
     }
-    @found_videos << 3
-    puts "next is array:" , @found_videos
-
-  end 
-
-
-
- #   if @find_video.first
- #     erb :find_tube 
- #   else
- #     genre = params[:new_genre]
- #     genre = genre.downcase
- #     sql = "select * from videos where genre LIKE '%#{genre}%' "
- #     @find_video = @db.exec(sql)
- #     if @find_video.first
- #       erb :find_tube 
- #     else
- #       @find_no_video = "Sorry, couldn't find that video on this site, try a #different search!"
- #     end
- #   end
-
-
- # else
- #   @find_no_video = "Looks like you didn't introduce your query..."
- # end
-
- # #if params[:new_genre]
- # #  genre = params[:new_genre]
- # #  sql = "select * from videos where genre LIKE '%#{genre}%' "
- # #  @find_video = @db.exec(sql)
- # #  erb :find_tube
- # #else
- # #  @find_no_video = "No videos on site with that query"
- # #end
+    puts "In get find_tube"
+    puts @found_videos.class
+    
+    if @count == 100
+      @find_no_video = "Sorry, couldn't find that video on this site, try a different search!"
+    else
+      @find_no_video = ""
+      erb :find_tube
+    end
+  else
+    @find_no_video = "Looks like you didn't introduce your query..."
+  end
 
   erb :find_tube
   

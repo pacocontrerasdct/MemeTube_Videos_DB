@@ -1,33 +1,34 @@
 <ul>
+<p class="notice"><%= @find_no_video %></p>
 
+ <% puts "IN FIND_TUBE" %> 
+ <%  puts @found_videos %>
 
-<h2><%= @find_no_video %></h2>
+  <% if @found_videos %>
+    <% @found_videos.each do |video_row| %>
 
-
-  <% if @find_video %>
-  <% @find_video.each do |video| %>
-  <li>
-  <div id="v_container">
-    
-    <div id="v_container_left">
-      <iframe id="player" type="text/html" width="480" height="320" src="https://youtube.com/embed/<%= video['url']%>" frameborder="0">
-      </iframe>
-    </div>
-
-    <div id="v_container_right">
-      <span>[T]itle:</span>
-      <span><%= video['title']%></span>
-      <span>[D]escription:</span>
-      <span><%= video['description']%></span>
-      <span>[G]enre:</span>
-      <span><%= video['genre']%></span>
-      <p>
-        <a href="/update_tube?id=<%= video['id']%>">[Update]</a>
-        <a href="/delete_tube?id=<%= video['id']%>">[Delete]</a>
-      </p>
-    </div>
-  </div>
-  </li>
-  <% end %>
-</ul>
+    <% video_row.each do |video| %>
+      <li>
+      <div id="v_container">
+        <div id="v_container_left">
+          <iframe id="player" type="text/html" width="480" height="320" src="https://youtube.com/embed/<%= video['url']%>" frameborder="0">
+          </iframe>
+        </div>
+        <div id="v_container_right">
+          <p><span class="yellow">[T]itle:</span>
+          <%= video['title'].capitalize %></p>
+          <p><span class="yellow">[D]escription:</span>
+          <%= video['description'].capitalize %></p>
+          <p><span class="yellow">[G]enre:</span>
+          <%= video['genre'].capitalize %></p>
+          <p>
+            <a href="/update_tube?id=<%= video['id']%>">[Update]</a>
+            <a href="/delete_tube?id=<%= video['id']%>">[Delete]</a>
+          </p>
+        </div>
+      </div>
+      </li>  
 <% end %>
+    <% end %>
+</ul>
+  <% end %>

@@ -3,18 +3,13 @@
 <head>
   <title>MEMETUBE - Links 2 tubes</title>
   <link rel="stylesheet" href="/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div id="container">
-    <header>
-      <div id="id_nav_search">
-          <form action="/find_tube" method="get" id="new_tube_video">
-            <button alt="Find it!">[FI(N)D]</button>
-            <input type="text" id="find_me" name="find_me" size="px" placeholder="Title? Genre? Any single word?">  
-          </form>
-      </div>      
-      <div id="id_logo">LOGO HERE</div>
-      <div id="id_headline">HEADLINE - TITLE HERE</div>
+    <header>     
+      <h1>MEME[t]UBES</h1>
+      <h2>Che que tubes!!!</h2>
       <div id="id_nav_top">
         <nav>
           <ul>
@@ -24,6 +19,12 @@
           </ul>
         </nav>
       </div>
+      <div id="id_nav_search">
+          <form action="/find_tube" method="get" id="new_tube_video">
+            <button alt="Find it!">[o]FIND</button>
+            <input type="text" id="find_me" name="find_me" size="30px" placeholder="Title? Genre? A word?">  
+          </form>
+      </div> 
     </header>
     <main>
       <%= yield %>
@@ -33,10 +34,9 @@
         <ul>
           <li><a href="/home" alt="Back home">HOME</a></li>
           <li><a href="/new_tube" alt="Add a tube">+TUBE</a></li>
-          <li><a href="/find_tube" alt="Find a tube">T[U]BE</a></li>
         </ul>
       </nav>
-      <div id="id_copyrights">LINE OF RIGHTS AND LINK TO DEV SITE</div>
+      <div id="id_copyrights">THIS A PACO CONTRERAS HOMEWORK FOR GENERAL ASSEMBLY LONDON - WDI15 - WEEK 4</div>
     </footer>
   </div>
 </body>

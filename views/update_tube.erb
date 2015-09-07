@@ -1,22 +1,20 @@
-<p>Updating this tube</p>
+<p class="notice">UPDATE DETAILS OF YOUR TUBE</p>
 <form action="/new_tube" method="get" name="new_tube_update">
-  <label for="new_title">Modify Title</label>
+  <label for="new_title">MODIFY [T]ITLE</label>
   <br>
-  <input type="text" id="new_title" name="new_title" size="100px" value="<%= @updated_title %>">
+  <input type="text" id="new_title" name="new_title" size="70px" value="<%= @updated_title %>">
   <br>
-  <label for="new_description">Modify description</label>
+  <label for="new_description">MODIFY DESCRIPT[I]ON</label>
   <br>
-  <input type="text" id="new_description" name="new_description" size="100px" value="<%= @updated_description %>">
+  <input type="text" id="new_description" name="new_description" size="70px" value="<%= @updated_description %>">
   <br>
-  <label for="new_genre">Modify the genre of this video</label>
+  <label for="new_genre">MODIFY GENR[e]</label>
   <br>
   <input type="text" name="new_genre" id="new_genre" size="50px" value="<%= @updated_genre %>">
   <br>
-  <label for="new_url">Modify the url of this video</label>
+  <label for="new_url">MODIFY youtube/[URL]</label>
   <br>
   <input type="text" name="new_url" id="new_url" size="50px" value="<%= @updated_url %>">
-  <br>
   <input type="hidden" name="video_id" id="video_id" value="<%= @video_id %>">
-  <br>
-  <button>Update it down!</button>
+  <button class="form_button" alt="Update it!">[t]>>[T]</button>
 </form>

@@ -10,12 +10,12 @@
     </div>
 
     <div id="v_container_right">
-      <span>[T]itle:</span>
-      <span><%= video['title'].capitalize %></span>
-      <span>[D]escription:</span>
-      <span><%= video['description'].capitalize %></span>
-      <span>[G]enre:</span>
-      <span><%= video['genre'].capitalize %></span>
+      <p><span class="yellow">[T]itle:</span>
+      <%= video['title'].capitalize %></p>
+      <p><span class="yellow">[D]escription:</span>
+      <%= video['description'].capitalize %></p>
+      <p><span class="yellow">[G]enre:</span>
+      <%= video['genre'].capitalize %></p>
       <p>
         <a href="/update_tube?id=<%= video['id']%>">[Update]</a>
         <a href="/delete_tube?id=<%= video['id']%>">[Delete]</a>
