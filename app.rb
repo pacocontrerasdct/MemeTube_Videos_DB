@@ -14,7 +14,6 @@ end
 get '/' do
   @title_of_page = "index"
   redirect('/home')
-
 end
 
 get '/home' do
@@ -24,10 +23,6 @@ get '/home' do
   @list = @db.exec(sql)
 
   erb :home
-end
-
-get '/views/styles.css' do
-  "Hello World"
 end
 
 get '/new_tube' do
@@ -127,4 +122,15 @@ get '/delete_tube' do
   @db.exec(sql)
 
   redirect('/home')
+end
+
+get '/one_tube' do
+  if params[:id]
+    id = params[:id]
+    puts 'this is id: ',params[:id]
+    sql = "SELECT * FROM videos WHERE id = '#{id}' "
+    @one_video = @db.exec(sql)
+    erb :one_tube
+  end
+ 
 end

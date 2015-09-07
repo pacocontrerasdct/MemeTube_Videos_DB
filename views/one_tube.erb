@@ -1,0 +1,26 @@
+<ul>
+  <% if @one_video %>
+  <li>
+  <div id="v_container">
+    <% @one_video = @one_video[0] %>
+    <div id="v_container_left">
+      <iframe id="player" type="text/html" width="480" height="320" src="https://youtube.com/embed/<%= @one_video['url']%>" frameborder="0">
+      </iframe>
+    </div>
+
+    <div id="v_container_right">
+      <p><span class="yellow">[T]itle:</span>
+      <%= @one_video['title'].capitalize %></p>
+      <p><span class="yellow">[D]escription:</span>
+      <%= @one_video['description'].capitalize %></p>
+      <p><span class="yellow">[G]enre:</span>
+      <%= @one_video['genre'].capitalize %></p>
+      <p>
+        <a href="/update_tube?id=<%= @one_video['id']%>">[Update]</a>
+        <a href="/delete_tube?id=<%= @one_video['id']%>">[Delete]</a>
+      </p>
+    </div>
+  </div>
+  </li>
+</ul>
+<% end %>

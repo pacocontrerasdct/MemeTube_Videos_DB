@@ -3,11 +3,6 @@
   <% @list.each do |video| %>
   <li>
   <div id="v_container">
-    
-    <div id="v_container_left">
-      <iframe id="player" type="text/html" width="480" height="320" src="https://youtube.com/embed/<%= video['url']%>" frameborder="0">
-      </iframe>
-    </div>
 
     <div id="v_container_right">
       <p><span class="yellow">[T]itle:</span>
@@ -17,8 +12,7 @@
       <p><span class="yellow">[G]enre:</span>
       <%= video['genre'].capitalize %></p>
       <p>
-        <a href="/update_tube?id=<%= video['id']%>">[Update]</a>
-        <a href="/delete_tube?id=<%= video['id']%>">[Delete]</a>
+        <a href="/one_tube?id=<%= video['id']%>">[WATCH]</a>
       </p>
     </div>
   </div>
